@@ -1,0 +1,9 @@
+{
+    "muxbots_lib_version": "1.0",
+    "type": "chatbot",
+    "title": "Daily Horoscopes",
+    "intro_message": "What is your astrological sign?",
+    "image": "icon.png",
+    "source_url": "horoscopes.js",
+    "published_url": "https://dfujiwara.github.io/horoscope-bot/chatbot.json"
+}
