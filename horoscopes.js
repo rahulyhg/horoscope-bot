@@ -89,7 +89,7 @@ const getHoroscope = async (sign) => {
     const {pageContent, url} = await fetchHoroscopes(sign)
     const horoscope = parseHoroscope(pageContent, url)
     const currentDate = new Date()
-    const currentDateWithSign = `${currentDate.toDateString}-${sign}`
+    const currentDateWithSign = `${currentDate.toDateString()}-${sign}`
     muxbots.localStorage.setItem('lastFetchDate', currentDateWithSign)
     return horoscope
   } else {
@@ -103,7 +103,7 @@ const shouldFetchRSS = (sign) => {
     return true
   }
   const currentDate = new Date()
-  const currentDateWithSign = `${currentDate.toDateString}-${sign}`
+  const currentDateWithSign = `${currentDate.toDateString()}-${sign}`
   return (currentDateWithSign !== lastFetchDate)
 }
 
